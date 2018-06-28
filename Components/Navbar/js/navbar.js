@@ -1,0 +1,9 @@
+$(document).ready(()=>{
+	$(".hamburger").click(()=>{
+		if($("#navbar").attr("class")==="menu"){
+			$("#navbar").addClass("responsive");
+		}
+		else
+			$("#navbar").removeClass("responsive");
+	});
+});

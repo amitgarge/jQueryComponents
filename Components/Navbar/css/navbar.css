@@ -1,0 +1,81 @@
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Montserrat';
+}
+
+.menu {
+  display: flex;
+  background-color: #563D7C;
+  width: 100%;
+}
+
+.menu a:first-child {
+  margin-right: auto;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.menu a {
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.menu a:hover {
+  color: #ffffff;
+}
+
+.menu .hamburger {
+  display: none;
+
+}
+
+.active{
+  font-weight: bold;
+  color:#ffffff;
+}
+
+.link{
+  color:#c4b3e0;
+}
+
+.Information  .text{
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 467px) {
+  .menu a:not(:first-child) {
+    display: none;
+  }
+  .menu a.hamburger {
+    display: block;
+    color:#ffffff;
+  }
+}
+
+@media screen and (max-width: 467px) {
+  body{
+    font-size: 1.2rem;
+  }
+  .menu.responsive {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+  .menu.responsive .hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .menu.responsive a:not(:first-child) {
+    display: flex;
+    text-align: left;
+  }
+}
