@@ -1,101 +1,116 @@
+/*CSS file for index(home) page*/
+
 :root {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-	font-size: 1rem;
-    font-family: 'Montserrat';
+  font-size: 1rem;
+  font-family: 'Montserrat';
+  background-color: #c7ead6;
 }
 
-a{
-	color: white;
+/*styling the 'a' tag*/
+
+a {
+  color: white;
 }
+
 a:link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:visited {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:active {
-    text-decoration: none;
-}
-.Heading{
-	width: 100%;
-	margin-bottom: 10px;
-	background-color: #6b7061;
-	color: white;
-	text-align: center;
-	font-size: 1em;
-	padding-top: 1em;
-	padding-bottom: 1em;
+  text-decoration: none;
 }
 
-.components{
-	padding-top: 100px;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	
+/*Heading of the page*/
+
+.Heading {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #B9DB34;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
-.component{
-	width:30%;
-	margin-right: 2px;
-	margin-bottom: 5px;
-	padding: 2px;
-	border: 1px solid #b9bab0;
+/*Three components' parent class using 'flex' */
+
+.components {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.component-title{
-	
-text-align: center;
+/*Component class*/
 
+.component {
+  background-color: white;
+  width: 30%;
+  margin-right: 2px;
+  margin-bottom: 5px;
+  padding: 2px;
+  border: 1px solid #b9bab0;
 }
 
-.button{
-	text-align: center;
-	border-radius: 2px;
-	background-color: #138496;
-	color: white;
-	cursor: pointer;  
-	font-size: 1em;
-	padding: 5px;
-	margin-bottom: 2px;
-
-}
-.button:hover{
-	background-color: #0f6c7a;
+.component-title {
+  text-align: center;
 }
 
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+/*Link to the demo button*/
+
+.button {
+  text-align: center;
+  border-radius: 2px;
+  background-color: #138496;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 5px;
+  margin-bottom: 2px;
+}
+
+.button:hover {
+  background-color: #0f6c7a;
+}
+
+/* If the screen size is between 701px and 865px wide... */
+
 @media screen and (max-width: 865px) {
-	body{
-		font-size: 1.2rem;
-	}
+  body {
+    font-size: 1.2rem;
+  }
   .components {
-  	
+    /*Components that are in row, will be displayed in column format*/
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
   }
 }
 
-@media screen and (max-width: 600px) {
+/* If the screen size is 700px wide or less... */
+
+@media screen and (max-width: 700px) {
   .components {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
   }
-
-  .component{
-  	width: 100%;
-  	
+  /*each component will occupy 100% of the width*/
+  .component {
+    width: 100%;
   }
 }
-

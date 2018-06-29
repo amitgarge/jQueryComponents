@@ -1,51 +1,59 @@
+/*CSS file for collapse-accordion format*/
+
 :root {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    font-family: 'Montserrat';
-   
+  font-family: 'Montserrat';
 }
 
-.Heading{
-	padding: 5px;
-	background-color: #b9db34;
-	text-align: center;
-	margin-bottom: 10px;
-	font-size: 1.2rem;
-	font-weight: bold;
+.Heading {
+  padding: 5px;
+  background-color: #b9db34;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-#accordion{
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+/*Accrodion is the parent div of all the collapsible items, using flex*/
+#accordion {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.card{
-	min-width: 60%;
-	max-width: 60%;
-	margin: 1px;
+/*collapsible item class*/
+.item {
+  min-width: 60%;
+  max-width: 60%;
+  margin: 1px;
 }
 
-.card-header{
-	text-align: center;
-	background-color: #efd95d;
-	padding: 10px;
-	font-size: 1rem;	
-
-}
-.card-header:hover{
-	background-color: #d6c053;
-	cursor: pointer;
-}
-.card-body{
-	border: 1px solid #afaeae;
-	font-size: 0.9rem;	
+/*Item Heading*/
+.item-header {
+  text-align: left;
+  background-color: #efd95d;
+  padding: 10px;
+  font-size: 1rem;
 }
 
+.item-header:hover {
+  background-color: #d6c053;
+  cursor: pointer;
+}
+
+.item-body {
+  border: 1px solid #afaeae;
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+/* If the screen size is 600px wide or less... */
 @media only screen and (max-width: 600px) {
-	.card{
-		min-width: 100%;
-	}
+  /*width of the item will be 100% of the screen*/
+  .item {
+    min-width: 100%;
+  }
 }

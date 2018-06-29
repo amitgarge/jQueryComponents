@@ -1,3 +1,5 @@
+/*CSS for Navbar*/
+
 :root {
   font-size: 16px;
 }
@@ -5,7 +7,10 @@
 body {
   font-size: 1rem;
   font-family: 'Montserrat';
+  background-color: #c7ead6;
 }
+
+/*Menu parent class*/
 
 .menu {
   display: flex;
@@ -13,12 +18,17 @@ body {
   width: 100%;
 }
 
+/* first child (i.e. 'brand') of the menu*/
+
 .menu a:first-child {
   margin-right: auto;
+  /*Only this element will appear on the extreme right*/
   font-size: 1.3rem;
   font-weight: bold;
   color: #ffffff;
 }
+
+/*For rest of the menu element*/
 
 .menu a {
   text-align: center;
@@ -31,39 +41,48 @@ body {
   color: #ffffff;
 }
 
+/*Hamburger icon is initially hidden (on big screens >=467px)*/
+
 .menu .hamburger {
   display: none;
-
 }
 
-.active{
+/*Active menu tab (currently 'Home' tab)*/
+
+.active {
   font-weight: bold;
-  color:#ffffff;
+  color: #ffffff;
 }
 
-.link{
-  color:#c4b3e0;
+/*Other non-active tabs*/
+
+.link {
+  color: #c4b3e0;
 }
 
-.Information  .text{
+/*Text on the page*/
+
+.Information .text {
   text-align: center;
   font-size: 1.2rem;
 }
 
+/* If the screen size is 467px wide or less... */
+
 @media screen and (max-width: 467px) {
+  /*Hide all the menu tabs except first tab i.e.brand*/
   .menu a:not(:first-child) {
     display: none;
   }
+  /*and display the hamburger icon*/
   .menu a.hamburger {
     display: block;
-    color:#ffffff;
+    color: #ffffff;
   }
-}
-
-@media screen and (max-width: 467px) {
-  body{
+  body {
     font-size: 1.2rem;
   }
+  /*Menu will become responsive using flex*/
   .menu.responsive {
     display: flex;
     position: relative;
@@ -74,6 +93,7 @@ body {
     right: 0;
     top: 0;
   }
+  /*All the menu tabs which are initially hidden will be displayed inside the hamburger menu*/
   .menu.responsive a:not(:first-child) {
     display: flex;
     text-align: left;

@@ -1,16 +1,25 @@
-$(document).ready(()=>{
-	$(".btn").click(()=>{
-		$(".modal").show();
-	});
+/*jS file to open and close the modal dialog*/
 
-	$(".close").click(()=>{
-		 $(".modal").hide();
-	});
+$(document).ready(() => {
+  //clicking on the launch modal button
+  $(".btn").click(() => {
+    //modal will be displayed
+    $(".modal").show();
+  });
 
-	$(window).click((e)=>{
-		var modal = $('.modal')[0];
-		if(e.target == modal){
-			$(".modal").hide();
-		}
-	});
+  $(".close").click(() => {
+    //clicking on the close button will close the modal (i.e. hides)
+    $(".modal").hide();
+  });
+
+  $(window).click((e) => {
+    //While modal is being displayed and if user clicks anywhere other than on modal,
+    //then close the modal
+
+    let modal = $('.modal')[0]; //Get the HTML DOM Object of the modal
+
+    if (e.target == modal) {
+      $(".modal").hide();
+    }
+  });
 });
